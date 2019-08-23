@@ -8,21 +8,28 @@ public class GameManager : MonoBehaviour
     public List<Transform> PlayerSpawnPositions;
     public List<Transform> EnemySpawnPositions;
     public List<Transform> PowerUpSpawnPositions;
-    public List<Transform> waypoints;
+    public List<Transform> availableforPUSpawn;
 
     public List<GameObject> Enemies;
     public List<GameObject> Players;
     public List<GameObject> PowerUps;
 
+    //index: 0 = speed, 1 = damage, 2 = health
+    public List<GameObject> powerUpType;
+
+    public int powerUpAmount = 1;
+    
+
     public GameObject enemyPrefab;
     public GameObject player1Prefab;
     //public GameObject player2Prefab;
-    public GameObject speedBoostPrefab;
 
     public GameObject enemyParent;
+    public GameObject powerUpParent;
 
     public bool singlePlayer;
     //public bool multiplayer;
+
 
     //Static instance of GameManager which allows it to be accessed by any other script.
     public static GameManager instance = null;
@@ -46,6 +53,14 @@ public class GameManager : MonoBehaviour
 
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
+    }
+
+    void Update()
+    {
+        if (PowerUps.Count > powerUpAmount)
+        {
+            SpawnPowerUps();
+        }
     }
 
     public void SpawnEnemies()
@@ -102,18 +117,24 @@ public class GameManager : MonoBehaviour
         
     }
 
-    //TODO: The game isn't spawning power-ups in the level, there are no errors in the console. I need to figure out what is happening and get it to spawn the power-ups
     public void SpawnPowerUps()
     {
-        if (PowerUps.Count > 5)
+        int amountNeeded = powerUpAmount - PowerUps.Count;
+
+        for (int i = amountNeeded; i > 0; i--)
         {
-            int randomPowerUpSpawn = Random.Range(0, PowerUpSpawnPositions.Count);
+            int type = Random.Range(0, powerUpType.Count);
+            int location = Random.Range(0, availableforPUSpawn.Count);
 
-            GameObject powerUp = Instantiate(speedBoostPrefab,
-                PowerUpSpawnPositions[randomPowerUpSpawn].transform.position,
-                PowerUpSpawnPositions[randomPowerUpSpawn].transform.rotation);
+            GameObject powerup = Instantiate(powerUpType[type], availableforPUSpawn[location].position,
+                availableforPUSpawn[location].rotation);
 
-            PowerUps.Add(powerUp);
+            powerup.transform.parent = powerUpParent.transform;
+
+            availableforPUSpawn.Remove(powerup.transform);
+
+            PowerUps.Add(powerup);
         }
     }
+
 }

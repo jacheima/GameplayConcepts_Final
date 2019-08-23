@@ -3,25 +3,51 @@ using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
-    public PawnData data;
+    
+    public Transform target;
 
-    Vector3 offset;
+    
+    public Vector3 offsetPosition;
 
-    public float rotateSpeed = 2f;
+    
+    public Space offsetPositionSpace = Space.Self;
+
+   
+    public bool lookAt = true;
 
     void Start()
     {
-        offset = transform.position - data.transform.position;
+        target = GameObject.FindWithTag("Player").transform;
+        transform.position = target.transform.position + offsetPosition;
     }
+
     void Update()
     {
-        transform.position = data.transform.position + offset;
+        if (target == null)
+        {
+            Debug.LogWarning("Missing target reference!", this);
 
+            return;
+        }
 
-        Quaternion camTurnAngle = Quaternion.AngleAxis(Input.GetAxis("Horizontal") * rotateSpeed, Vector3.up);
+        // compute position
+        if (offsetPositionSpace == Space.Self)
+        {
+            transform.position = target.TransformPoint(offsetPosition);
+        }
+        else
+        {
+            transform.position = target.position + offsetPosition;
+        }
 
-        offset = camTurnAngle * offset;
-
-        transform.LookAt(data.transform);
+        // compute rotation
+        if (lookAt)
+        {
+            transform.LookAt(target);
+        }
+        else
+        {
+            transform.rotation = target.rotation;
+        }
     }
 }

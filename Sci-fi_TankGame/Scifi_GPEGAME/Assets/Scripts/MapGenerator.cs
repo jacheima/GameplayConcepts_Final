@@ -117,6 +117,8 @@ public class MapGenerator : MonoBehaviour
                 GameManager.instance.EnemySpawnPositions.Add(tileScript.enemySpawns);
                 GameManager.instance.PlayerSpawnPositions.Add(tileScript.playerSpawn);
                 GameManager.instance.PowerUpSpawnPositions.Add(tileScript.powerUpSpawns);
+                GameManager.instance.availableforPUSpawn.Add(tileScript.powerUpSpawns);
+                
 
                 mapList.Add(room);
             }

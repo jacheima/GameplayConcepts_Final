@@ -40,6 +40,15 @@ public class InputContoller : MonoBehaviour
         }
 
         //if the player presses space bar
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject bullet =
+                Instantiate(data.bulletPrefab, data.bulletSpawn.transform.position, data.bulletSpawn.transform.rotation);
+
+            bulletMover bm = bullet.GetComponent<bulletMover>();
+
+            bm.SetPlayer(data);
+        }
 
 
         data.mover.Move(directionToMove);

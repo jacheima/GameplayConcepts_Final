@@ -376,7 +376,6 @@ GameObject:
   - component: {fileID: 8005387464358809113}
   - component: {fileID: 3640175122828107909}
   - component: {fileID: 8473752824139792864}
-  - component: {fileID: 2646466391796963635}
   m_Layer: 8
   m_Name: PlayerSpawn
   m_TagString: Untagged
@@ -413,7 +412,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524213966885847528}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -443,19 +442,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &2646466391796963635
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524213966885847528}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &623517878732249557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1001,6 @@ GameObject:
   - component: {fileID: 2575319916068904821}
   - component: {fileID: 1373356500961548045}
   - component: {fileID: 6648370446324879480}
-  - component: {fileID: 3359931711164955632}
   m_Layer: 8
   m_Name: Tile2Waypoint3
   m_TagString: Untagged
@@ -1052,7 +1037,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122392053006072123}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1082,19 +1067,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &3359931711164955632
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122392053006072123}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2218849991610963247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1352,6 @@ GameObject:
   - component: {fileID: 1041512891336891146}
   - component: {fileID: 7891703690753895714}
   - component: {fileID: 8596812881904516716}
-  - component: {fileID: 6922284338316110515}
   m_Layer: 8
   m_Name: Tile2Waypoint5
   m_TagString: Untagged
@@ -1417,7 +1388,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2901174668456866178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1447,19 +1418,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6922284338316110515
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2901174668456866178}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2949993171603361909
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,7 +1523,6 @@ GameObject:
   - component: {fileID: 5745854527765087751}
   - component: {fileID: 1641539067037687026}
   - component: {fileID: 3147684242461711208}
-  - component: {fileID: 1779063819730246774}
   m_Layer: 8
   m_Name: EnemySpawn2
   m_TagString: Untagged
@@ -1602,7 +1559,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3185749142149928481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1632,19 +1589,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &1779063819730246774
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3185749142149928481}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3455642230419456950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1656,7 +1600,6 @@ GameObject:
   - component: {fileID: 3168917672466837852}
   - component: {fileID: 6190694815376280858}
   - component: {fileID: 9139493374739960666}
-  - component: {fileID: 520812415161905665}
   m_Layer: 8
   m_Name: Tile2Waypoint2
   m_TagString: Untagged
@@ -1693,7 +1636,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3455642230419456950}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1723,19 +1666,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &520812415161905665
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3455642230419456950}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3717156754544750820
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +1950,6 @@ GameObject:
   - component: {fileID: 1823700475744123200}
   - component: {fileID: 6490283422383132010}
   - component: {fileID: 6611697206592389077}
-  - component: {fileID: 813560080596041483}
   m_Layer: 8
   m_Name: PowerupSpawn
   m_TagString: Untagged
@@ -2057,7 +1986,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4273667392991128224}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2087,20 +2016,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &813560080596041483
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273667392991128224}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &4363232738125668851
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,7 +2027,6 @@ GameObject:
   - component: {fileID: 9146724097828907157}
   - component: {fileID: 6038144065133536762}
   - component: {fileID: 3102679518785070881}
-  - component: {fileID: 7257064326195624407}
   m_Layer: 8
   m_Name: Tile2Waypoint4
   m_TagString: Untagged
@@ -2149,7 +2063,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4363232738125668851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2179,19 +2093,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &7257064326195624407
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4363232738125668851}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4688169093214201879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,7 +2469,6 @@ GameObject:
   - component: {fileID: 7713965192737657124}
   - component: {fileID: 4849782698410710550}
   - component: {fileID: 5152753763860752858}
-  - component: {fileID: 4721689364406815477}
   m_Layer: 8
   m_Name: Tile2Waypoint6
   m_TagString: Untagged
@@ -2605,7 +2505,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5241964702028974332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2635,19 +2535,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &4721689364406815477
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5241964702028974332}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5594778421452268255
 GameObject:
   m_ObjectHideFlags: 0
@@ -3387,7 +3274,6 @@ GameObject:
   - component: {fileID: 1538496246005165285}
   - component: {fileID: 4721243610678874393}
   - component: {fileID: 7145946570714011599}
-  - component: {fileID: 8892721348989115550}
   m_Layer: 8
   m_Name: Tile2Waypoint1
   m_TagString: Untagged
@@ -3424,7 +3310,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9151652332480304930}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3454,16 +3340,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &8892721348989115550
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9151652332480304930}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
