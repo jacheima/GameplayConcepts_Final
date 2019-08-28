@@ -17,7 +17,16 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        if (gameObject.tag == "Player1Cam")
+        {
+            target = GameObject.Find("Player One").GetComponent<Transform>();
+        }
+
+        if (gameObject.tag == "Player2Cam")
+        {
+            target = GameObject.Find("Player Two").GetComponent<Transform>();
+        }
+
         transform.position = target.transform.position + offsetPosition;
     }
 

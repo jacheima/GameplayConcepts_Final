@@ -18,7 +18,8 @@ public class AIController : MonoBehaviour
     {
         Patrol,
         Chase,
-        Investigate
+        Investigate,
+        Attack
     };
 
     public enum AI_AVOID_STATES
@@ -61,6 +62,13 @@ public class AIController : MonoBehaviour
     public bool isForward;
 
     public bool seesPlayer = false;
+
+    public bulletMover bm;
+
+    void Start()
+    {
+        
+    }
     public void ChangeState(AI_STATES newState)
     {
         //Note the time I entered the state
@@ -185,7 +193,7 @@ public class AIController : MonoBehaviour
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, transform.forward, out hit,
             sightDistance))
         {
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject.tag == "Player1" || hit.collider.gameObject.tag == "Player2")
             {
                 ChangeState(AI_STATES.Chase);
                 chaseTarget = hit.collider.gameObject;
@@ -197,7 +205,7 @@ public class AIController : MonoBehaviour
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward + transform.right).normalized, out hit,
             sightDistance))
         {
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject.tag == "Player1" || hit.collider.gameObject.tag == "Player2")
             {
                 ChangeState(AI_STATES.Chase);
                 chaseTarget = hit.collider.gameObject;
@@ -209,7 +217,7 @@ public class AIController : MonoBehaviour
         if (Physics.Raycast(transform.position + Vector3.up * heightMultiplier, (transform.forward - transform.right).normalized, out hit,
             sightDistance))
         {
-            if (hit.collider.gameObject.tag == "Player")
+            if (hit.collider.gameObject.tag == "Player1" || hit.collider.gameObject.tag == "Player2")
             {
                 ChangeState(AI_STATES.Chase);
                 chaseTarget = hit.collider.gameObject;
@@ -223,17 +231,12 @@ public class AIController : MonoBehaviour
 
         transform.LookAt(investigateSpot);
 
-        Debug.Log(Time.time);
 
-        if (Time.time >= stateStartTime + investigateWait)
-        {
-            ChangeState(AI_STATES.Patrol);
-        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player1" || other.tag == "Player2")
         {
             ChangeState(AI_STATES.Investigate);
             investigateSpot = other.gameObject.transform.position;
@@ -246,11 +249,24 @@ public class AIController : MonoBehaviour
         {
             Seek(chaseTarget.transform);
 
-            if (Vector3.Distance(transform.position, chaseTarget.transform.position) > sightDistance)
-            {
-                seesPlayer = false;
-                ChangeState(AI_STATES.Investigate);
-            }
+        }
+        
+    }
+
+    public void Attack()
+    {
+        transform.position = transform.position;
+        pawn.mover.Move(Vector3.zero);
+        transform.LookAt(chaseTarget.transform);
+
+        if (Time.time > stateStartTime + pawn.shootWait)
+        {
+            GameObject bullet = Instantiate(pawn.bulletPrefab, pawn.bulletSpawn.transform.position,
+                pawn.bulletSpawn.transform.rotation);
+
+            bulletMover bm = bullet.GetComponent<bulletMover>();
+
+            bm.SetPlayer(pawn);
         }
         
     }

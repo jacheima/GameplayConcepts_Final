@@ -5,6 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Player1HUD
+  - Timer
+  - EnemyHealthP1
+  - EnemyHealthP2
+  - Player1HealthBar
+  - Player2Cam
+  - Player1Cam
+  - HealthBarPlayer2
+  - Player2HealthBar
+  - Player1
+  - Player2
+  - Player1ScoreText
+  - Player2ScoreText
+  - Player1LivesText
+  - Player2LivesText
   layers:
   - Default
   - TransparentFX

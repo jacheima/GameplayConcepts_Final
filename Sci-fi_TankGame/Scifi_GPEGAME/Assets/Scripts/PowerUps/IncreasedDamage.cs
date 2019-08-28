@@ -8,6 +8,7 @@ public class IncreasedDamage : MonoBehaviour
     public float duration;
     public bool isPermanent;
 
+
     void OnTriggerEnter(Collider other)
     {
         PawnData pawn = other.gameObject.GetComponent<PawnData>();
@@ -18,5 +19,8 @@ public class IncreasedDamage : MonoBehaviour
         Destroy(gameObject);
 
         pawn.IncreasedDamage(modifier, duration, isPermanent);
+
+       
+
     }
 }

@@ -59,11 +59,9 @@ public class MapGenerator : MonoBehaviour
             Random.InitState(RandomSeed(DateTime.Now));
         }
 
-
-        CreateMap();
     }
 
-    void CreateMap()
+    public void CreateMap()
     {
         //create the 2D array
         grid = new GameObject[columns, rows];
@@ -118,6 +116,7 @@ public class MapGenerator : MonoBehaviour
                 GameManager.instance.PlayerSpawnPositions.Add(tileScript.playerSpawn);
                 GameManager.instance.PowerUpSpawnPositions.Add(tileScript.powerUpSpawns);
                 GameManager.instance.availableforPUSpawn.Add(tileScript.powerUpSpawns);
+                GameManager.instance.availableEnemySpawns.Add(tileScript.enemySpawns);
                 
 
                 mapList.Add(room);
